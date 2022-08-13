@@ -1,0 +1,197 @@
+.Editor {
+  height: 540px;
+  width: 520px;
+  margin-block: 20px;
+  margin-bottom: 80px;
+  padding: 25px;
+  padding-bottom: 80px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background-color: var(--bg-color);
+  color: white;
+  border-radius: var(--radius);
+  font-family: 'Kumbh Sans';
+}
+
+.Editor h3 {
+  margin-left: 4px;
+  font-size: 22px;
+}
+
+.Editor .Container {
+  margin-inline: -25px;
+  padding-inline: 25px;
+  overflow-y: auto;
+}
+
+.Editor .Navigator {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  animation: fadeMoveIn .5s ease forwards;
+}
+
+.Editor .Container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.Editor>.Navigator {
+  width: 100%;
+  padding-inline: 25px;
+  padding-bottom: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.Navigator .Button,
+.Navigator .Spacer {
+  max-width: 130px;
+  width: 40%;
+}
+
+.Navigator .Dots {
+  height: 40px;
+  margin-inline: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.Navigator .Dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: hsl(0, 0%, 40%);
+  cursor: pointer;
+  transition: background-color .4s, transform .4s;
+}
+
+.Navigator .Dot.active {
+  background-color: var(--accent-color);
+  transform: scale(1.4);
+}
+
+
+
+.Editor .PreviewButton {
+  width: 130px;
+  position: fixed;
+  bottom: 20px;
+  left: calc(50% - 65px);
+  z-index: 2;
+  display: none;
+  box-shadow: var(--shadow);
+}
+
+label {
+  margin-left: 6px;
+  display: block;
+  color: var(--text-color);
+  font-size: 15px;
+}
+
+textarea,
+input {
+  width: 100% !important;
+  margin-top: 6px;
+  padding: 8px 14px;
+  background-color: hsl(0, 0%, 16%);
+  color: var(--text-color);
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-family: 'Poppins';
+  transition: all .3s, transform .2s;
+}
+
+textarea {
+  height: 150px !important;
+  resize: none;
+}
+
+textarea:hover,
+input:hover {
+  background-color: hsl(0, 0%, 17.5%);
+}
+
+textarea:focus,
+input:focus {
+  background-color: hsl(0, 0%, 20%);
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+textarea:active,
+input:active {
+  transform: scale(.975);
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 12px;
+}
+
+.Container>.Button.Delete,
+.Container>.Button.New {
+  height: 40px;
+  width: 40px;
+  margin: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.Container>.Button.New {
+  width: 96px;
+}
+
+.Skills {
+  margin-top: 10px;
+  grid-template-columns: 1fr;
+  row-gap: 16px;
+}
+
+.Skills input {
+  margin: 0;
+}
+
+.Skill {
+  display: grid;
+  grid-template-columns: 1fr 40px;
+  gap: 12px;
+}
+
+.Info .Input:nth-child(3),
+.Info .Input:last-child,
+.Contact .Input:first-child,
+.Contact .Input:nth-child(2),
+.Work .Input:last-child {
+  grid-column: 1 / 3;
+}
+
+.Work textarea {
+  height: 84px !important;
+}
+
+@media (max-width: 1000px) {
+  .Editor .PreviewButton {
+    display: flex;
+  }
+}
+
+@media (max-width: 440px) {
+  .Editor>.Navigator .Dots {
+    display: none;
+  }
+
+  .Editor>.Navigator .Button {
+    width: 100%;
+  }
+}
