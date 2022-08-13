@@ -1,5 +1,4 @@
 # CV Application
-CV Application for [The Odin Project](https://www.theodinproject.com/).
 
 ## Demo
 🌑 [Live Demo](https://nekusu.github.io/cv-application/)
