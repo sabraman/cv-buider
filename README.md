@@ -14,5 +14,3 @@ CV Application for [The Odin Project](https://www.theodinproject.com/).
 * Responsive design.
 * Save resume as image.
 
-## Screenshots
-![](/screenshots/screenshot-0.png)
