@@ -1,7 +1,7 @@
 # CV Application
 
 ## Demo
-🌑 [Live Demo](https://nekusu.github.io/cv-application/)
+🌑 [Live Demo](https://cv-sabra.netlify.app/)
 
 ## Built with
 * React
